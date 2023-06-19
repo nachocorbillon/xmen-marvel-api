@@ -1,0 +1,55 @@
+H1{margin-bottom: 5vh; }
+
+.about {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  .about b {
+    color: goldenrod;
+  }
+  
+  .about__image {
+    margin: 0;
+    padding: 10px 0 0;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  @media (min-width: 401px) { .about__image :first-child{margin-top: 20px;}}
+  
+  .about__text {
+    margin-bottom: 40px;
+    overflow: hidden;
+    color:lightgrey;
+  }
+
+
+  .about__image:nth-child(even) {
+    float: left;
+    margin-right: 20px;
+  }
+  
+  .about__image:nth-child(odd) {
+    float: right;
+    margin-left: 20px;
+  }
+
+  @media (max-width: 400px) {
+
+    h1{ margin-top: 100px;}
+
+    .about__image {
+      float: none;
+      margin: 0 auto 20px;
+      width:50%;
+    }
+  }  @media (max-width: 250px) {
+    .about__image {
+      display: none;
+    }
+  }
+    
+  

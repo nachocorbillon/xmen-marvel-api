@@ -1,0 +1,366 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin:0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: rgba(18, 54, 236, 0.9);
+  }
+  /*HEADER*/
+  header {
+    position: fixed;
+    top:0;left:0;
+     margin: 0;
+     width: 100%;
+     color: beige;
+     z-index:100;
+   }
+ 
+   
+ h1,h2,h3 {
+   color: goldenrod;    font-weight: 100;}
+ 
+   h1,h2 {
+     font-size: calc(16px + (1vw * 2));
+     margin: 10% auto 2%;
+   }
+ 
+   #mobilelinktohome{display: none;text-align: center;}
+ 
+ 
+   @media screen and (max-width: 900px) {.dispensable {display: none;}}
+   @media screen and (max-width: 300px) {#linktoreading {display: none;}
+   #linktohome {display: none;}
+   #mobilelinktohome{display: block;}
+ }
+/*NAV*/
+ nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1%;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  background-color: black;
+  z-index: 3;
+}
+
+nav a {
+font-size: 20px;    color: beige;
+}
+
+nav .link:hover {
+  color: goldenrod;
+}
+
+/*FOOTER*/
+footer {
+  height: 48px;
+  background-color: black;
+  color: white;
+  padding: 0 1.5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin:0;
+ position: fixed; bottom: 0;left:0;
+ /* opacity: 0; */
+}
+#ilovemarvelcomics{visibility: hidden;
+display:flex; align-items: center; opacity: 0.75;}
+
+footer:hover #ilovemarvelcomics{visibility: visible;}
+
+@media screen and (max-width: 800px){footer { display: none;}}
+/* @media screen and (max-width: 350px){footer p:nth-child(2) span { display: none;}}
+@media screen and (max-width: 250px){footer p:nth-child(2) img { display: none;}} */
+
+
+/*GRID*/
+
+.GridEra {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 1em;
+  margin: 1% 10%;
+}
+
+.comic {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  width: 100px;
+  height: 175px;
+  margin-bottom: 2em;
+}
+
+.comic figure {
+  margin: 0;
+
+}
+
+.comic img {
+width: 100%;
+height: 150px;
+}
+
+.comic figcaption {
+  font-size: 1em;
+  color: beige;
+  margin: 0;
+  font-weight: 100;
+  text-align: center;
+}
+
+.comic:not(:hover) img {
+  opacity: 0.85;
+}
+
+.comic:hover figcaption {
+  color: gold;
+}
+
+a {
+  text-decoration: none;
+}
+
+article a {
+  color: rgba(245, 245, 220, 0.9);
+}
+
+ul {
+  margin-top: 2em;
+}
+
+ul li {
+  margin-top: 0.5em;
+}
+
+article ul li a {
+  color: black;
+}
+
+a:hover {
+  color: goldenrod;
+}
+
+.GridEra a[href="#"] {
+  color: beige;
+}
+
+.GridEra {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 1em;
+  margin: calc(5% + 1em) 10%;
+}
+
+@media screen and (max-width: 1300px) {
+  .GridEra {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  h1,h2,h3 {
+  font-weight: 200;}
+  .GridEra {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h1,h2,h3 {
+  font-weight: 300;}
+  .GridEra {
+    grid-template-columns: repeat(4, 1fr);
+    margin: calc(5% + 0.5em) 10%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1,h2,h3 {
+    font-weight: 400;}
+  .GridEra {
+    grid-template-columns: repeat(3, 1fr);
+    margin: calc(5% + 0.5em) auto;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  h1,h2,h3 {
+    font-weight: 500;}
+  .GridEra {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 200px) {
+  h1 {
+    font-weight: 600;}
+  .GridEra {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+
+
+/*TARJETA*/
+ #tarjeta {
+  border-radius: 16px;
+  background:linear-gradient(to bottom right,rgba(255,255,255,0.2),rgba(255,255,255,0.5));
+  max-width:800px;
+  margin:auto;
+  padding:20px;
+  margin-top: 2em;
+  margin-bottom:4em;
+}
+#tarjeta .link {
+  color:rgba(18, 54, 236, 0.9)
+}
+
+#tarjeta p .link {
+  color:white
+}
+
+#tarjeta .link:active {
+  text-decoration: underline;  
+}
+
+#tarjetamenu{min-width: 50%; margin:auto;}
+
+#tarjetamenu ul {width: 100%;padding: 0;}
+#tarjetamenu ul li {width: 100%; padding: 0;display: flex;justify-content: center;}
+
+/*BOTONES selector era*/
+#tarjetamenu ul li button {
+  width: 100%;
+  max-width: 300px;
+  text-align: left;
+  margin:auto;  
+  font-size: 14px;
+  font-weight: bold;
+  color: firebrick;/* red font color */
+  background-color: #daa520; /* goldenrod background color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+#tarjetamenu ul li button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100%; /* changed to right */
+  width: 100%;
+  height: 100%;
+  background-color: firebrick; /* red background color */
+  transform: translateX(100%);
+  transition: transform 0.5s ease-out;
+  opacity: 0.1;
+}
+
+#tarjetamenu ul li button:active:before {
+  transform: translateX(0%);
+  opacity: 0.6;
+}
+
+#tarjetamenu ul li button:focus {
+  outline: none;
+}
+
+#tarjetamenu ul li button:active {
+  background-color: firebrick; /* red background color */
+  color: #daa520; /* goldenrod font color */
+}
+
+
+
+/*COMIC CARD*/
+.comic-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 10px;
+  height: 350px; 
+}
+
+
+
+/*ERROR*/
+  .Error404 {
+    height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Error404 h2 {
+    font-size: 3em;
+    margin-bottom: 1em;
+    color: goldenrod;
+    text-align: center;
+  }
+  
+  .Error404 p {
+    font-size: 1.5em;
+    color: beige;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  
+  .Error404 img {
+    width: 80%;
+    min-width: 200px;
+    margin: auto;
+  }
+  
+
+
+
+  /*OTROS*/
+.spacebottom {text-align: center;}
+
+  @media screen and (max-width: 800px) 
+  {
+    body {padding:0 2%;}
+  }
+
+  /* main {
+    padding: 0 7.5%;
+
+  }
+  
+  main h3 {
+    font-size: 1.75em;
+    text-align: left;
+    color: goldenrod;
+    padding: 0.7em;
+    font-weight: normal;
+  }
+  .Error{height: 100vh;
+    display: flex; align-items: center; flex-direction: column;
+    justify-content: center; color: goldenrod; font-size:2vh;}
+    
+     .Error img {margin-top:10vh; display:block; max-height: 60vh; width: auto;} 
+      
+     */

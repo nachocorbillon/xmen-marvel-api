@@ -1,0 +1,55 @@
+*{box-sizing: border-box;}
+
+h2{text-align: center; margin: 120px 0;}
+
+.omnibusGrid article {
+  border-radius: 16px;
+  background:linear-gradient(to bottom right,rgba(218, 165, 32, 0.9),rgba(218, 165, 32, 0.7));
+  max-width:1000px;
+  margin:auto;
+  padding:20px 5%;
+  margin-bottom:6em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left;
+}
+.omnibusGrid article img {
+  height:80%;
+  max-height: 200px;
+  border-radius: 2%;
+  padding-left:20%;
+}
+
+@media (max-width:800px) {
+  .omnibusGrid article{
+    flex-direction: column;
+    align-items: center;
+    }
+    .omnibusGrid article img {
+      padding-left:0;
+    }
+  }
+
+
+
+.omnibusGrid article:hover{background: goldenrod;} 
+.omnibusGrid article p{font-style: italic;} 
+
+
+/**/
+main h3{font-size:1.5em; color: white; padding: 0; font-weight: normal;}
+
+
+
+
+  .omnibusGrid a {text-decoration: none; }
+  .omnibusGrid a {color:rgba(245,245,220,0.9)}
+  .omnibusGrid ul {margin-top: 2em;}
+  .omnibusGrid ul li {margin-top: 0.5em;}
+  .boton #tarjeta:hover {background-color: rgba(18, 54, 236, 1);color:goldenrod;}
+
+
+
+
+

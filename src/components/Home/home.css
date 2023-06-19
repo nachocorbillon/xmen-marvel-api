@@ -1,0 +1,108 @@
+*{box-sizing: border-box;}
+h1{text-align: center;}
+/* 
+#home {display: flex;align-items: center; justify-content: space-between;margin:0} */
+#welco {max-width:800px; text-align: center; margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 50px auto 10px;
+    cursor:crosshair;
+}
+#welco :nth-child(1), #welco :nth-child(2){cursor:auto}
+
+#welco p {
+font-size: 20px; line-height: 1.5;
+}
+#welco b {
+  color:gold;
+  }
+  /*VITRINA*/
+#vitrina
+{
+     display: flex;
+     justify-content: space-around;
+     gap:1%;
+     margin: 2.5% auto 0.5%;
+     width: 100%;
+     max-width: 800px;
+     cursor:crosshair;
+}
+#vitrina Link
+{max-width: 19%;}
+.vitrina-comic {max-width:100%;border: 4px dashed #2949ed; padding:10px}
+.vitrina-comic:hover {border: 4px dashed gold;cursor: crosshair;
+}
+
+@media screen and (max-width: 800px){
+  .vitrina-comic
+  {
+       padding:0;
+       margin:0;
+       border:none;
+  }
+  #vitrina Link
+{margin:0;padding:0;max-width: 20%;}
+  #vitrina
+{
+     display: flex;
+     width: 100%;
+     max-width: 800px;
+     cursor:crosshair;
+}
+}
+
+
+
+#homelinks {
+  text-indent: 0;
+  list-style-type: none;
+  margin: 0 auto 10%;
+  text-align: center;
+  /* width: 80%; */
+}
+
+#homelinks li {
+  display: inline-block;
+  margin: 10px;
+  font-size: 1.2rem;
+}
+
+#homelinks li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+#homelinks li a:hover {
+  border: 2px double goldenrod;
+  transition: background-color 0.3s ease;
+}
+
+#homelinks li a:active {
+  background-color:  goldenrod;
+  color:black;
+  transition: background-color 0.3s ease;
+}
+
+#homelinks li:last-child{display: none;}
+
+@media screen and (max-width: 800px) 
+{
+  footer p, #welco p {font-size: 14px;}
+  #homelinks li:last-child{display: block;}
+}
+
+@media screen and (max-width: 400px) 
+{
+footer p {font-size: 12px;}
+#homelinks li a:hover {
+  border: 0px solid dodgerblue;
+}}
+
+@media screen and (max-width: 300px) 
+{
+ footer p {font-size: 10px;}
+}
+
